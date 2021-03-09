@@ -25,7 +25,13 @@
     8.打開winscp，把iso檔複製到虛擬機  
     ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(422).png)  
     9.cd /home/user，ls確認有沒有copy到。mount CentOS-7-x86_64-DVD-2009.iso /mnt，cd /mnt，ls。cp -R /mnt/* /var/ftp/pub，cd /var/ftp，ls，cd pub，ls。  
-    10.cd /var/ftp/pub/images/pxeboot，cp vmlinuz initrd.img /tftpboot/netboot/。
+    10.cd /var/ftp/pub/images/pxeboot，cp vmlinuz initrd.img /tftpboot/netboot/。  
+    11.用winscp把ks.cfg檔案複製到虛擬機。cp /home/user/ks.cfg /var/ftp/pub/ks.cfg。vim /var/ftp/pub/ks.cfg更改檔案內容。把url的部分改成192.168.100.254。    
+    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/url192.168.100.254.png)  
+    12.chmod 644 /var/ftp/pub/ks.cfg，vim /tftpboot/pxelinux.cfg/default更改檔案內容。  
+    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(420).png)  
+    13.systemctl start vsftpd/tftp/dhcpd，systemctl status vsftpd/tftp/dhcpd，systemctl enable vsftpd/tftp/dhcpd。systemctl daemon-reload。  
+    14.cd /tftpboot/，ls al，chmod 755 netboot/，chmod 755 pxelinux.cfg/
     
     
 
