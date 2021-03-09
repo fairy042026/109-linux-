@@ -1,0 +1,6 @@
+# pxe
+
+##教學步驟
+
+1. 建立一台叫pxe test的虛擬機，類型：Linux;版本：other linux(64bit)，記憶體：2048MB;硬碟：50GB。到設定-系統，把網路和硬碟勾選，其他兩個不選，並把網路放到最上面，如圖。
+![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(414).png)
