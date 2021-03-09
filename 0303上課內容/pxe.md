@@ -23,7 +23,9 @@
     6.mkdir /tftpboot，cd /usr/share/syslinux，cp pxelinux.0 menu.c32 memdisk mboot.c32 chain.c32 /tftpboot/，chmod 644 -R /tftpboot，chmod 755 /tftpboot。  
     7.cd /tftpboot，mkdir pxelinux.cfg，mkdir netboot  
     8.打開winscp，把iso檔複製到虛擬機  
-    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(422).png)
+    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(422).png)  
+    9.cd /home/user，ls確認有沒有copy到。mount CentOS-7-x86_64-DVD-2009.iso /mnt，cd /mnt，ls。cp -R /mnt/* /var/ftp/pub，cd /var/ftp，ls，cd pub，ls。  
+    10.cd /var/ftp/pub/images/pxeboot，cp vmlinuz initrd.img /tftpboot/netboot/。
     
     
 
