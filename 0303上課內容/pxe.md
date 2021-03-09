@@ -31,7 +31,10 @@
     12.chmod 644 /var/ftp/pub/ks.cfg，vim /tftpboot/pxelinux.cfg/default更改檔案內容。  
     ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(420).png)  
     13.systemctl start vsftpd/tftp/dhcpd，systemctl status vsftpd/tftp/dhcpd，systemctl enable vsftpd/tftp/dhcpd。systemctl daemon-reload。  
-    14.cd /tftpboot/，ls al，chmod 755 netboot/，chmod 755 pxelinux.cfg/
+    14.cd /tftpboot/，ls al，chmod 755 netboot/，chmod 755 pxelinux.cfg/，確認權限。  
+    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-03_10-31-13.jpg) 
+    15.最後啟動pxe test虛擬機，出現自動安裝畫面即為成功。  
+    ![image](https://github.com/fairy042026/109-linux-/blob/main/0303%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(424).png)  
     
     
 
