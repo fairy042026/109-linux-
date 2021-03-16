@@ -10,6 +10,8 @@
 4. nslookup www.pchome.com.tw 127.0.0.1  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(428).png)
 5. systemctl restart named
+6. 切到虛擬機7-2，為了要讓7-2可以連到7-1，需要改掉 /etc/named.conf的127.0.0.1以及localhost，改成any  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(430).png)
 
 
 
