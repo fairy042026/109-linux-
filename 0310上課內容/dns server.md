@@ -22,7 +22,12 @@
 ### 第二個實驗-管理網路    
 1. gedit /etc/named.rfc1912.zones在最下面新增一個網域  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(443).png)  
-2. 
+2. gedit /var/named/a.com.zone寫入以下資訊  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(445).png)  
+3. 用指令named-checkzone a.com /var/named/a.com.zone確認無誤  
+4. systemctl restart named  
+5. 切到7-2，輸入指令host -t a www.a.com.tw 192.168.56.125)，打開cmd，輸入指令nslookup www.a.com.tw 192.168.56.125，看能不能查詢到，有查到代表正解成功  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(435).png)
 
 
 
