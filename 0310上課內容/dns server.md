@@ -3,6 +3,8 @@
 ## 教學內容
 
 **準備兩台虛擬機:7-1,7-2，兩台都開兩張網路卡，分別是NAT以及僅限主機介面卡，開始記得要關防火牆以及selinux**  
+
+### 第一個實驗  
 1. 虛擬機7-1執行yum install bind-utils, yum install bind -y
 2. gedit /etc/named.conf & 會看到如下畫面  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(426).png)
@@ -14,6 +16,15 @@
 6. systemctl restart named 
 7. 7-2虛擬機執行host -t a www.pchome.com.tw 192.168.56.108(7-1 ip)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(432).png)
+8. 切到7-1，使用指令named-checkconf確認配置文件沒有錯誤
+9. vim /etc/resolv.conf ，增加一個nameserver 192.168.56.125(7-1 ip自己ip位址)，儲存後可以用host -t a www.pchome.com.tw 看能不能解析出來
+
+### 第二個實驗-管理網路    
+1. gedit /etc/named.rfc1912.zones在最下面新增一個網域
+![image](https://github.com/fairy042026/109-linux-/blob/main/0310%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(443).png)  
+2. 
+
+
 
 
 
