@@ -24,6 +24,21 @@
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%964.PNG)  
 4. 存檔。使用指令named-checkconf確認配置文件沒有錯誤。檢查第一台機器(主)跟第二台有沒有同步。可以在兩台機器去按電源-設定-detail-date&time，automatic的那兩個打開。  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%965.PNG)  
-5. 第二台機器gedit /etc/sysconfig/named，增加兩行如下  
+5. 第二台機器gedit /etc/sysconfig/named，增加兩行如下(ENABLE...OPTION...)    
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%967.PNG)  
+6. 第二台機器修改/etc下的named.rfc1912.zones，增加一個zone(master是第一台機器的ip)存檔， systemctl restart named  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%968.PNG)  
+7. 第一台修改/etc/named.conf，加上最下面兩行，裡面是第二台機器的ip  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%969.PNG)  
+8. 第一台如步驟3，把dnssec-validation yes;標記掉，下面改dnssec-validation no;  
+9. 存檔。第一台機器gedit /etc/sysconfig/named，增加一行OPTIONS="-4"    
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%9610.PNG)  
+10. 確認權限，前面root，後面named，不是就修改(chown...)。   
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%9611.PNG)  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%9612.PNG)  
+11. 到/var/named的a.com.zon新增一筆紀錄abc(上面的serial要變更，變大)  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%9613.PNG)  
+12. 存檔。systemctl restart named。使用nslookup，查詢第一台機器跟第二台機器的ip 
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%9614.PNG)  
+第一台主機器的設定就可以同步到第二台機器了
 
