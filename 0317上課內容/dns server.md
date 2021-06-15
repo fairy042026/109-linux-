@@ -15,3 +15,15 @@
 6. 輸入反向解析查詢的指令nslookup 192.168.56.200 127.0.0.1確認有無解析成功(上面是正向解下面是反向解)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-17_10-47-20.jpg)  
 
+
+## 主輔同步
+1. 把第二台虛擬機(輔)安裝bind。yum install bind。  
+2. 修改 /etc/named.conf，加上masterfile-format text;，把配置改成如下  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%963.PNG)  
+3. 把dnssec-validation yes;標記掉，下面改dnssec-validation no;  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%964.PNG)  
+4. 存檔。使用指令named-checkconf確認配置文件沒有錯誤。檢查第一台機器(主)跟第二台有沒有同步。可以在兩台機器去按電源-設定-detail-date&time，automatic的那兩個打開。  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%965.PNG)  
+5. 第二台機器gedit /etc/sysconfig/named，增加兩行如下  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0317%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E6%93%B7%E5%8F%967.PNG)  
+
