@@ -14,7 +14,7 @@
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0324-4.jpg)  
 3. 開第一台機器，/etc下的named.rfc1912.zones在最上面定義兩個acl  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/03244.PNG)  
-4. 把之前的東西先註解，加上view "env-test".../view "env-prod"...
+4. 把之前的東西先註解，加上view "env-test".../view "env-prod"...  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/03245.PNG)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/03248.PNG)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/03246.PNG)  
