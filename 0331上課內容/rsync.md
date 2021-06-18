@@ -26,5 +26,6 @@ rsync+inotify：若駭客入侵，當inotify接收到警告，就觸發rsync覆�
 把本地端的test備份到另一台機器  
 1. rsync -avzh /test/ root@另一台機器ip:/backup  
 2. 另一台機器輸入指令tree /backup就會看到一樣的檔案  
+  
 從遠端抓回資料  
 1. rsync -avzh root@另一台機器ip:/backup/ /test  
