@@ -36,7 +36,7 @@ cd htocs/cat index.html/echo "hello" > index.html
 若是把原來的容器刪掉，再用同一埠號啟動容器，返回結果不會是原來更改的內容。  
 如果已經修改了，希望裡面的內容重新啟動時不會消失，就要把活的容器重新製作成新的鏡像  
 * docker exec -it id bash/cd htdocs/echo "hello" > index.html
-* docker commit id myhttpd:1.0  
+* docker commit id myhttpd:1.0(給他名稱和標籤)  
 * docker images查看新鏡像  
 * docker run -itd -p 8082:80 myhttpd:1.0  
   
