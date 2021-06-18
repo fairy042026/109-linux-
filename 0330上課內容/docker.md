@@ -29,5 +29,5 @@ docker要持續執行任務，如果他沒有持續執行，當他任務結束�
 * 進去正在執行的容器：docker exec -it id bash  
 主機名字跟容器id相同，代表正在容器裡面    
 cd htocs/cat index.html/echo "hello" > index.html
-開瀏覽器，網址列輸入127.0.0.1:8081，網頁就改了  
+開虛擬機瀏覽器，網址列輸入127.0.0.1:8081，或是打開google瀏覽器輸入機器Ip:8080(看你開在哪個埠號)網頁就改了  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-24_12-02-08.jpg)  
