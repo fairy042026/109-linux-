@@ -52,4 +52,4 @@ cd htocs/cat index.html/echo "hello" > index.html
 * 下載鏡像：docker pull fairy042026/myhttpd:1.0  
 * docker run -itd -p 8081:80 fairy042026/myhttpd:1.0  
 * curl 127.0.0.1:8081
-* 進到ubuntu系統的容器內若想用ping等等的指令，要先apt update，然後再apt install net-tools
+* 進到ubuntu系統的容器內若想用ifconfig等等的指令，要先apt update，然後再apt install net-tools/apt install iputips-ping
