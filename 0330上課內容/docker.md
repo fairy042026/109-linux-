@@ -30,7 +30,7 @@ docker要持續執行任務，如果他沒有持續執行，當他任務結束�
 主機名字跟容器id相同，代表正在容器裡面    
 cd htocs/cat index.html/echo "hello" > index.html
 開虛擬機瀏覽器，網址列輸入127.0.0.1:8081，或是打開google瀏覽器輸入機器Ip:8080(看你開在哪個埠號)網頁就改了  
-![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-24_12-02-08.jpg)  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-30_19-31-32.jpg)  
   
 可以進去docker很多次，再開一次終端機，輸入：docker exec -it id bash就進來了，可以從不同終端進入，離開就輸入exit。
 若是把原來的容器刪掉，再用同一埠號啟動容器，返回結果不會是原來更改的內容。  
