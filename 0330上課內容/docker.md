@@ -39,3 +39,6 @@ cd htocs/cat index.html/echo "hello" > index.html
 * docker commit id myhttpd:1.0  
 * docker images查看新鏡像  
 * docker run -itd -p 8082:80 myhttpd:1.0  
+  
+也可以下載別人的鏡像  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-30_20-13-20.jpg)  
