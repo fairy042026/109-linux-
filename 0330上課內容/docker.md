@@ -53,3 +53,11 @@ cd htocs/cat index.html/echo "hello" > index.html
 * docker run -itd -p 8081:80 fairy042026/myhttpd:1.0  
 * curl 127.0.0.1:8081
 * 進到ubuntu系統的容器內若想用ifconfig等等的指令，要先apt update，然後再apt install net-tools/apt install iputips-ping
+  
+## Dockerfile  
+1. mkdir test-dockerfile/cd test-dockerfile/gedit Dockerfile  
+2. 編寫如下 
+![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/03301.PNG)  
+3. echo "hi" > index.html / docker build -t centos:web1.0 .
+4. docker run -d -p 8082:80 centos:web1.0
+
