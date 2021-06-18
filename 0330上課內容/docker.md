@@ -2,3 +2,32 @@
 
 docker安裝請參考：https://github.com/fairy042026/docker/blob/master/0915%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9.md  
 ## 
+
+下載不同docker鏡像，上dockerhub搜尋ubuntu(或其他想下載的)    
+  
+先systemctl start docker  
+* 輸入指令docker pull ubuntu:16.04/docker pull ubuntu:18.04下載兩個版本  
+* 輸入指令docker image可以看到兩個不同鏡像  
+* 把鏡像刪除：docker rmi ubuntu:18.04 或是輸入image id前三個字母刪除: docker rmi 8e4  
+  
+一個docker負責一件事情就好，維護比較簡單  
+    
+(先下載httpd鏡像)  
+* 網頁伺服器啟動：docker run -itd -p 8080:80 httpd:latest  
+* 查看目前正在執行的容器：docker ps  
+    
+docker要持續執行任務，如果他沒有持續執行，當他任務結束他就死掉了  
+    
+* 顯示包含已經死亡的docker：docker ps -a  
+* 清除已經死亡的docker：docker rm af3(容器id的前三個字母)  
+* 清除正在啟用的docker，要先暫停docker才能刪：docker stop id，再使用docker rm id  
+* 重新啟動docker：docker start id  
+* 想直接刪除正在執行的docker(不建議的暴力法)：docker rm -f id  
+* 同一個鏡像產生兩個docker：docker run -itd -p 8080:80 httpd/docker run -itd -p 8081:80 httpd  
+  
+兩個網站要有各自內容  
+* 進去正在執行的容器：docker exec -it id bash  
+主機名字跟容器id相同，代表正在容器裡面    
+cd htocs/cat index.html/echo "hello" > index.html
+開瀏覽器，網址列輸入127.0.0.1:8081，網頁就改了  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-24_12-02-08.jpg)  
