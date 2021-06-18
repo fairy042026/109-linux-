@@ -42,3 +42,13 @@ cd htocs/cat index.html/echo "hello" > index.html
   
 也可以下載別人的鏡像  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0330%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-30_20-13-20.jpg)  
+  
+把鏡像上傳到官網，名字有規定  
+* 重新打標籤：docker tag myhttpd:1.0 fairy042026(你的帳號)/myhttpd:1.0  
+* 登入docker：docker login，輸入帳號密碼  
+* 把鏡像推回去：docker push fairy042026/myhttpd:1.0  
+測試鏡像上傳成功，可以先把本地端的刪掉  
+* docker rmi id(若有容器正在執行，要先查看正在執行的容器是哪個並刪除)  
+* 下載鏡像：docker pull fairy042026/myhttpd:1.0  
+* docker run -itd -p 8081:80 fairy042026/myhttpd:1.0  
+* curl 127.0.0.1:8081
