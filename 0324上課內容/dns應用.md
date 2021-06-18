@@ -21,4 +21,5 @@
 5. 存檔。使用指令named-checkconf確認配置文件沒有錯誤。再systemctl restart named。再在第一台機器nslookup www.a.com 192.168.56.108(這邊記得用自己機器的ip)
 6. 第二台機器nslookup www.a.com 192.168.56.108。第一台回復56.100，第二台回復56.200  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0324%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-03-24_10-44-33.jpg)  
+不同的人問相同的東西但得到的答案是不同的。
 
