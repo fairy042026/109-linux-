@@ -50,5 +50,8 @@ ip(上)
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05196.PNG)  
 ip(下)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05197.PNG)  
+執行ansible-playbook playbook.yml 
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05198.PNG)  
+
 
 
