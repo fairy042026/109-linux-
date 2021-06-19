@@ -10,6 +10,6 @@
 3. 第一台機器安裝：yum install wireshark-* 。輸入wireshark打開，在enp0s9抓封包，curl 192.168.1.2，可以從wireshark看到封包。
 **安全性差**
 
-###步驟(ssh)
+### 步驟(ssh)
 1. 在第二台機器輸入systemctl status sshd確保ssh有開啟
 2. 在第一台機器輸入ssh -Nf -L 5555:192.168.1.2:80 user@192.168.1.2(建立ssh通道的方法，user是伺服器的帳號，192.168.1.2是伺服器ip)
