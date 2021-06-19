@@ -10,9 +10,9 @@
 主機清單Ansible inventory：針對機器進行分類，管理伺服器的時候，可能要管理很多不同伺服器，就要分門別類進行管理
 cd /etc/ansible/
 gedit hosts & 編輯內容，新增主機清單如下(第二、三台主機ip)
-![image](0428-1)
+![image](https://github.com/fairy042026/109-linux-/blob/main/0428%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0428-1.PNG)  
 存檔。執行：ansible webservers -a "hostname"(webserver要執行的清單，hostname要查詢的主機名字)  
-![image](0428-2)
+![image](https://github.com/fairy042026/109-linux-/blob/main/0428%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0428-2.PNG)
 
 執行時出現顏色
 * 黃色：對遠端節點進行相應修改
