@@ -26,5 +26,20 @@
 1. 第二台機器(ssh server)再多一張內部網路網卡，名稱叫b。再開第三台機器，三張網卡，第三張內部網路名稱b。
 2. 第二台機器確認ssh有沒有開，設定第一張內部網路ip:192.168.1.2/24，第二張ip:192.168.2.2/24。ping 192.168.1.1看能不能ping  
 3. 開啟第三台機器，輸入python -m SimpleHTTPServer 80當作網頁伺服器  
-4. 第一台機器輸入ssh -Nf -L 5555:192.168.2.1:80 user@192.168.1.2(192.168.2.1是真正要連接的伺服器)
+4. 第一台機器輸入ssh -Nf -L 5555:192.168.2.1:80 user@192.168.1.2(192.168.2.1是真正要連接的伺服器)  
   
+### Remote Port Forwarding
+情境：未來在公司裏面辦公，要存取公司的網路，外面的世界沒辦法直接連，所以可以塞一個暗道，連到外面的世界，讓外面反向建一個ssh通道，外面就可以通過通道存取內部資料  
+**前面的設定都不改**  
+1. 第二台機器輸入echo 1 > /proc/sys/net/ipv4/ip_forward把路由功能打開  
+2. 切到第三台機器，ip route show確定有沒有內定路由(default via...)  
+3. 切第一台機器，確定可以ping到第三台機器(ping 192.168.2.1)，把網頁伺服器打開python -m SimpleHTTPServer 80
+4. 第三台機器當作ssh server把ssh打開  
+5. 第一台機器建立反向通道，ssh -Nf -R 192.168.2.1:6666:192.168.1.1:80 user@192.168.2.1(ssh -Nf -R 連的ip是誰:6666:反向連誰的ip:80 user@連的ip是誰)
+6. 第三台機器curl 127.0.0.1:6666
+
+  
+8. 第二台機器設定防火牆規則
+* iptables -A FORWARD -p tcp --destination-port 80 -j DROP
+* iptables -A FORWARD -p tcp --destination-port 22 -j ACCEPT
+* iptables -A FORWARD -p tcp --destination-port 80 -j DROP
