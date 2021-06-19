@@ -15,7 +15,7 @@
 裝好一個伺服器想換裝別的伺服器，用變數就可以直接取代，把變數內容改變，直接套用原本的，不會寫死，也不用重新寫  
   
 * vars：變數
-1. 編輯playbook.yml檔 
+1. 編輯playbook.yml檔   
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0519%E8%AE%8A%E6%95%B8.PNG)
 2. 執行ansible-playbook playbook.yml  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-30-45.jpg)  
