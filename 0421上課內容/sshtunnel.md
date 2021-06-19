@@ -14,4 +14,6 @@
 1. 在第二台機器輸入systemctl status sshd確保ssh有開啟
 2. 在第一台機器輸入ssh -Nf -L 5555:192.168.1.2:80 user@192.168.1.2(建立ssh通道的方法，user是伺服器的帳號，192.168.1.2是伺服器ip)  
 3. 輸入密碼，之後把瀏覽器打開，輸入http://127.0.0.1:5555
-4. 在第二台機器echo hi > hi.htm，第一台機器輸入http://127.0.0.1:5555/hi.htm 。存取本地端的ip及埠號，實際上連結到伺服器端
+4. 在第二台機器echo hi > hi.htm，第一台機器輸入http://127.0.0.1:5555/hi.htm 。存取本地端的ip及埠號，實際上連結到伺服器端  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0421%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-04-21_10-10-25.jpg)  
+
