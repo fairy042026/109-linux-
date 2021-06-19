@@ -5,9 +5,9 @@
 ## notify
 用來觸發另外一個事件，，跳到handlers，notify的名字要跟handlers名字一樣  
   
-1. 編輯playbook.yml檔  
+1. 編輯playbook.yml檔    
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_09-26-55.jpg)  
-2. httpd.conf檔案的Listen改8081，存檔後執行ansible-playbook playbook.yml 
+2. httpd.conf檔案的Listen改8081，存檔後執行ansible-playbook playbook.yml   
 3. 瀏覽器輸入ip:8081，就可以看到網頁啟動了  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-05-15.jpg)  
   
