@@ -24,6 +24,6 @@
 準備兩個檔案：playbook.yml / vars_public.yml  
 playbook.yml  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05191.PNG)  
-vars_public.yml
+vars_public.yml  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05192.PNG)  
-vars_public.yml
+
