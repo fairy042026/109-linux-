@@ -39,3 +39,16 @@ server1
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05194.PNG)  
 執行ansible-playbook playbook.yml  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-30-45.jpg)  
+  
+## 定義單一台主機
+有可能安裝軟體套件的時候，希望不同主機安裝不同套件  
+針對哪個主機，寫下ip位址(上)，另一台主機變數ip也寫(下)
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-22-29.jpg)  
+playbook.yml  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05195.PNG)  
+ip(上)  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05196.PNG)  
+ip(下)
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05197.PNG)  
+
+
