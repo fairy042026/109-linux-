@@ -37,9 +37,16 @@
 4. 第三台機器當作ssh server把ssh打開  
 5. 第一台機器建立反向通道，ssh -Nf -R 192.168.2.1:6666:192.168.1.1:80 user@192.168.2.1(ssh -Nf -R 連的ip是誰:6666:反向連誰的ip:80 user@連的ip是誰)
 6. 第三台機器curl 127.0.0.1:6666
-
   
-8. 第二台機器設定防火牆規則
+### Dynamic Port Forwarding
+情境：防火牆把80埠關閉，內部就沒辦法存取外部網路的網頁伺服器，這時候可以透過翻牆連到外面的SSH server，使用動態埠號轉發就可以連接到不同機器
+1. 複製第三台機器(第四台)，三張網卡一樣內部網路b，ip設192.168.2.10，第四台機器開兩個網頁伺服器python -m SimpleHTTPServer 80/python -m SimpleHTTPServer 8080  
+2. 第三台機器確定sshd有打開
+3. 第二台機器設防火牆規則
 * iptables -A FORWARD -p tcp --destination-port 80 -j DROP
 * iptables -A FORWARD -p tcp --destination-port 22 -j ACCEPT
-* iptables -A FORWARD -p tcp --destination-port 80 -j DROP
+* iptables -A FORWARD -p tcp --destination-port 8080 -j DROP
+4. 第一台機器確定可以ping第三、第四台機器。這時候網頁還連不上192.168.2.10:8080
+5. 第一台機器輸入ssh -Nf -D 127.0.0.1:7777 user@192.168.2.1輸入密碼就建好通道了
+6. 瀏覽器當中的喜好設定中的網路設定，proxy部分選manual...，SOCKS host埠號改成7777
+7. 192.168.2.10:8080就可以瀏覽了
