@@ -10,7 +10,7 @@
 7. 瀏覽器輸入ip(遠端控制的那台機器ip):8080
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0512%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-12_11-38-07.jpg)  
   
-## CentOS 7 下 yum 安装和配置 NFS(伺服器端)  
+## CentOS 7 下 yum 安装和配置 NFS(安裝伺服器端:第二台，第一台是執行端)  
 透過劇本讓伺服器遠端安裝NFS
 1. 建立一個資料夾example2，準備兩個檔案exports.j2(配置檔，ip記得改自己的)/playbook.yml(劇本檔)
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0512%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-12_11-27-22.jpg)  
@@ -22,5 +22,9 @@
 6. cd /test-nfs。touch a b c
 7. 切到第二台機器，cd /data也有abc三個檔案
   
-## CentOS 7 下 yum 安装和配置 NFS(客戶端)  
-1. 
+## CentOS 7 下 yum 安装和配置 NFS(安裝客戶端:第三台)  
+1. 開第三台機器(客戶端機器)，然後第一台機器的playbook.yml檔新增一個server2
+![image](https://github.com/fairy042026/109-linux-/blob/main/0512%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-12_11-53-15.jpg)  
+2. 第一台機器執行ansible-playbook playbook.yml
+3. 第三台機器執行ls，可以看到多了/test-nfs資料夾。然後touch 1 2 3
+4. 回到第一台cd /data，ls也有123
