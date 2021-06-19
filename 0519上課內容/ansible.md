@@ -29,7 +29,7 @@ vars_public.yml
 執行ansible-playbook playbook.yml  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-52-30.jpg)  
   
-## 
+## 群組變數
 設定兩個資料夾：group_vars(定義群組變數) / host_vars  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-16-51.jpg)  
 在/etc/ansible/hosts定義了群組，若要針對群組設定變數，group_vars下的檔名要跟群組名稱一樣。如果group_vars下定義了一個檔案"all"...是給所有群組用的  
@@ -37,3 +37,5 @@ playbook.yml
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05193.PNG)  
 server1  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/05194.PNG)  
+執行ansible-playbook playbook.yml  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0519%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-05-19_10-30-45.jpg)  
