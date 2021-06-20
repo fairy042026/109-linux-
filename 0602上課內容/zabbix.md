@@ -27,3 +27,15 @@
 15. systemctl enable zabbix-server zabbix-agent httpd
 16. 在外面google瀏覽器輸入ip/zabbix就可以看到畫面
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0602%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(598).png)  
+
+## 登錄
+1. 瀏覽器輸入 http://ip/zabbix 進去後，選擇next step
+2. 確保從上到下都是ok，next step
+3. passwd輸入zabbix，next step
+4. next step
+5. next step
+6. 出現Congratulations即完成。
+7. 登錄畫面 http://ip/zabbix/index.php  帳號：Admin/密碼：zabbix
+8. 就會出現畫面
+![image](https://github.com/fairy042026/109-linux-/blob/main/0602%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20(602).png)  
+
