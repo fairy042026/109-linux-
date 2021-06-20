@@ -33,3 +33,11 @@ host-item-security，下面有兩個細項，其中一個會檢查etc/passwd檔�
 9. 點一下左下的centos7-1，templates填linux選第一個，add，update
 10. 第一台機器systemctl restart zabbix-server，重新整理網頁會看到右邊的ZBX亮綠色(如果亮紅色，去檢查zabbix_agent.conf有沒有錯，確認無誤還是紅色可以重新啟動虛擬機試試看)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/09066.PNG)  
+
+## 監控主機
+監控自己想要的指標，可以寫一個監控腳本，判斷指標是否正確，ex:判斷系統目前人數  
+  
+1. 第二台機器編輯檔案gedit /etc/zabbixzabbix_agentd.conf &
+2. 找到UserParameter，新增UserParameter=check_users, who | wc -l
+![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/09088.PNG)  
+3. 存檔。systemctl restart zabbix-agent  
