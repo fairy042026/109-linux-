@@ -20,11 +20,11 @@ host-item-security，下面有兩個細項，其中一個會檢查etc/passwd檔�
   
 1. 再開一台機器，當作要安裝的agent，第二台機器開終端機，執行yum -y install zabbix-agent
 2. systemctl start zabbix-agent，systemctl status zabbix-agent，systemctl enable zabbix-agent
-3. gedit /etc/zabbix/zabbix_agent.conf，找到Server=ip，ip改成伺服器ip(第一台機器ip)，ServerActive也改伺服器ip，Hostname=改自己機器名字(第二台機器)
+3. gedit /etc/zabbix/zabbix_agent.conf，找到Server=ip，ip改成伺服器ip(第一台機器ip)，ServerActive也改伺服器ip，Hostname=改自己機器名字(第二台機器)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/06093.PNG)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/06094.PNG)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/06095.PNG)    
-4. 存檔。systemctl restart zabbix-agent
+4. 存檔。systemctl restart zabbix-agent  
 5. 回到dashboard-configuration-hosts，把監控主機加進來
 6. 螢幕右上角create host，填主機名稱。(Group點select，如果都沒有你要的，可以到左上角host group創造想要的名稱，這邊我創了一個webservers)
 7. 回到hosts，group選webservers。Agent interfaces的ip address填第二台的ip
