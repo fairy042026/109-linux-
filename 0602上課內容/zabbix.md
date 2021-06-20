@@ -1,4 +1,4 @@
-# zabbix安裝
+# zabbix監控軟體安裝
 
 1. 在虛擬機打開瀏覽器，進入 https://www.zabbix.com/ 網站，點選download，第一步選擇配置如下  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0602%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/photo_2021-06-02_10-49-07.jpg)
