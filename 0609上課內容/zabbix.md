@@ -53,4 +53,10 @@ host-item-security，下面有兩個細項，其中一個會檢查etc/passwd檔�
 3. Applications:security。add之後看到下面多一項check number of on-line users
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0122.PNG)  
 4. 點選graph，點右上角create graph
+5. name:check number of on-line users / Items:add-check number of on-line users打勾-select-add
+6. 點check number of on-line users選preview
+7. 去第二台機器關掉一個終端機，monitoring-graphs
+8. 右邊graph選check number of on-line users，從3降到2
+![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0333.PNG)  
+
 
