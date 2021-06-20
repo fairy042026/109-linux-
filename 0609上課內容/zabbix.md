@@ -41,4 +41,16 @@ host-item-security，下面有兩個細項，其中一個會檢查etc/passwd檔�
 2. 找到UserParameter，新增UserParameter=check_users, who | wc -l  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/09088.PNG)  
 3. 存檔。systemctl restart zabbix-agent  
-4. 
+4. 切到第一台機器，yum install zabbix-get，第二台機器再開一個視窗
+5. 第一台機器執行zabbix_get -s 第二台機器ip -p 10050 -k "check_users"，會出現3  
+![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0911.PNG)  
+透過指令zabbix_get -s 第二台機器ip -p 10050 -k "check_users"，就可以監控到第二台機器有多少人
+
+**網頁版**
+1. configuration-hosts-centos7-1的items，右上角create item
+2. name:check number of on-line users / key:check_users / Update interval:10s
+![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0111.PNG)  
+3. Applications:security。add之後看到下面多一項check number of on-line users
+![image](https://github.com/fairy042026/109-linux-/blob/main/0609%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/0122.PNG)  
+4. 點選graph，點右上角create graph
+
