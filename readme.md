@@ -8,3 +8,4 @@
 參考網站：0512  https://qizhanming.com/blog/2018/08/08/how-to-install-nfs-on-centos-7  
 參考網站：0602  https://www.zabbix.com/download?zabbix=4.0&os_distribution=centos&os_version=7&db=mysql&ws=apache  
 參考網站：0609  https://tw511.com/a/01/21076.html  
+參考網站：0616  https://dotblogs.com.tw/xerion30476/2019/08/28/153643
