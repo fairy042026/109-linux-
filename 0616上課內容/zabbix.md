@@ -5,7 +5,7 @@
 
 1. 把line打開，建立一個群組
 2. 開虛擬機，gedit line_notify.sh &(或用putty-vim line_notify.sh)  
-3. 把以下內容複製貼上
+3. 把以下內容複製貼上  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/0616%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/06162.PNG)  
 4. 把line_notify.sh變成可執行檔，chmod +x line_notify.sh
 5. 到line的環境申請，開啟 https://notify-bot.line.me/zh_TW/
