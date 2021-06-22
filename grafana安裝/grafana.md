@@ -9,4 +9,5 @@
 ![image](https://github.com/fairy042026/109-linux-/blob/main/grafana%E5%AE%89%E8%A3%9D/0622.PNG)  
 
 # 操作
-參考網站：https://www.itread01.com/content/1544022964.html
+參考網站：https://www.itread01.com/content/1544022964.html  
+參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/
