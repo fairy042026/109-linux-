@@ -28,15 +28,8 @@ Zabbix API details的用戶名和密碼就是zabbix web的登錄用戶名和密�
 之後選Dashboard，可以import dashboard，然後選右邊列表dashboard就可以看到監控畫面  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/grafana%E5%AE%89%E8%A3%9D/%E5%9C%96%E7%89%873.png)  
 ![image](https://github.com/fairy042026/109-linux-/blob/main/grafana%E5%AE%89%E8%A3%9D/%E5%9C%96%E7%89%872.png)  
-
-
-
-
-
-
-
-
-
+![image](https://github.com/fairy042026/109-linux-/blob/main/grafana%E5%AE%89%E8%A3%9D/%E5%9C%96%E7%89%871.png)
+  
 參考網站：https://www.itread01.com/content/1544022964.html  
 參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/  
 參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/  
