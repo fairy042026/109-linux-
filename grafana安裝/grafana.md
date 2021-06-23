@@ -19,11 +19,14 @@
   
 rpm -Uvh https://repo.zabbix.com/zabbix/5.4/rhel/7/x86_64/zabbix-release-5.4-1.el7.noarch.rpm
 (反正就都重裝就對了過程太亂有點忘了)  
+安裝完之後到左邊列表的Configuration-plugins
+![image](https://user-images.githubusercontent.com/47874868/123037574-72cd5280-d421-11eb-8143-772267da5b53.png)
 
 
 
 
 參考網站：https://www.itread01.com/content/1544022964.html  
-參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/
-
+參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/  
+參考網站：https://blog.downager.com/2019/05/29/CentOS-Zabbix-Grafana-%E5%AE%89%E8%A3%9D/  
+參考網站：https://kknews.cc/zh-tw/tech/rlgzazo.html
 
