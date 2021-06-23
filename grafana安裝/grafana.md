@@ -20,7 +20,16 @@
 rpm -Uvh https://repo.zabbix.com/zabbix/5.4/rhel/7/x86_64/zabbix-release-5.4-1.el7.noarch.rpm
 (反正就都重裝就對了過程太亂有點忘了)  
 安裝完之後到左邊列表的Configuration-plugins
-![image](https://user-images.githubusercontent.com/47874868/123037574-72cd5280-d421-11eb-8143-772267da5b53.png)
+選zabbix並enable，update，完成後到configure-data source點zabbix，會看鄧以下畫面
+![image](https://github.com/fairy042026/109-linux-/blob/main/grafana%E5%AE%89%E8%A3%9D/06231.PNG)  
+URL寫的是zabbix server的api地址：http://主機ip/zabbix/api_jsonrpc.php 前面IP換成安裝zabbix的主機ip，後面url不變。  
+Zabbix API details的用戶名和密碼就是zabbix web的登錄用戶名和密碼，默認是Admin/zabbix。  
+完成後，點擊下面的Save&Test，這樣zabbix就匯入完成了。  
+
+
+
+
+
 
 
 
